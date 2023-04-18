@@ -1,0 +1,12 @@
+-- write your queries here
+-- 1. SELECT * FROM owners, vehicles;
+-- 2. SELECT first_name, last_name, COUNT(owner_id) FROM owners JOIN vehicles ON owners.id = vehicles.owner_id  GROUP BY(first_name, last_name) ORDER BY first_name ASC;
+-- 3. 
+-- SELECT first_name, last_name, ROUND((SUM(COALESCE(price))/COUNT(owner_id))) AS average_price, COUNT(owner_id) 
+-- FROM owners 
+-- LEFT JOIN vehicles 
+-- ON owners.id = vehicles.owner_id  
+-- GROUP BY(first_name, last_name, owner_id) 
+-- HAVING COUNT(owner_id) > 0 AND ROUND((SUM(COALESCE(price))/COUNT(owner_id))) IS NOT NULL
+-- ORDER BY average_price DESC
+-- LIMIT 3;
